@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+   
+        <button id="btn"> Make my food!</button>
+        <script>
+
+            const sandwich = {
+                bread: 'cheese',
+                cheese: 'cheddar',
+                
+                prepare: () => {
+                    console.log(this)
+                    return `I want a sandwitch with ${this.bread} bread and ${this.cheese} cheese`; 
+                },
+
+                make: function () {
+                    window.setTimeout( () => {
+                        console.log( this.prepare())
+                    }, 500)
+                }
+            };
+
+            const btn = document.querySelector('#btn');
+
+            btn.addEventListener('click', function() { sandwich.make() });
+        
+        </script>
+    </body>
+</html>
