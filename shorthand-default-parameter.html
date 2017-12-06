@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        
+        <script>
+            
+            const name = 'Sergio';
+            const surname = 'Soares';
+            const profession = 'programming';
+
+            const oldPerson = {
+                name: name,
+                surname: surname,
+                profession: profession
+            }
+            
+            const newPerson = {
+                name,
+                surname,
+                profession,
+
+                perfil() {
+                    console.log(`I am ${name} ${surname} and work with ${profession}`)
+                }
+
+            }
+
+            newPerson.perfil();
+
+            let fruit = 'Apple';
+            let hobby = 'Read';
+
+            function favorites(fruit = 'generic', hobby = 'study') {
+                // fruit = fruit || 'generic'
+                console.log(`I like ${fruit} and of ${hobby}`)
+            }
+
+            favorites();
+
+
+        </script>
+    
+    </body>
+</html>
