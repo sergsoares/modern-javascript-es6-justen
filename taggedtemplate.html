@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+
+        <script>
+
+            const name = 'Sergio'
+            const activity = 'learning'
+            const subject = 'code'
+
+            function green(template, ...values){
+                return template.reduce((accumulator, part, i) => {
+                    return `${accumulator} <strong> ${values[i - 1]} </strong> ${part} `
+                });
+            }
+
+            const todo = green`The ${name} is ${activity} how ${subject}!`;
+            
+            document.body.innerHTML = todo;
+            
+        </script>
+    
+    </body>
+</html>
